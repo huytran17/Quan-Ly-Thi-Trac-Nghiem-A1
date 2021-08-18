@@ -3,8 +3,8 @@ define('APP_PATH', __DIR__);
 
 include_once('./config/app.php');
 include_once(APP_PATH . '/classes/Model.php');
-include_once(APP_PATH . '/database/Migration.php');
 
+//include_once(APP_PATH . '/database/Migration.php');
 // $migration = new Migration();
 // $migration->refresh();
 
