@@ -36,7 +36,7 @@ class Database
             }
             // Nhánh kết nối thất bại
             catch (PDOException $e) {
-                echo $e->getMessage();
+                throw $e;
             }
         }
 
