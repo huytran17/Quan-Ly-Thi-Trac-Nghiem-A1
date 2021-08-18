@@ -4,6 +4,17 @@ include_once APP_PATH . '/interfaces/IBaseInterface.php';
 
 interface IBienBanInterface extends IBaseInterface
 {
-    public function getAllWithThiSinh() : mysqli_result|bool;
+    /**
+     * Lấy tất cả bản ghi cùng với dữ liệu từ bảng chứa khóa ngoại
+     *
+     * @return mysqli_result|bool
+     */
+    public function getAllWithThiSinh(): mysqli_result|bool;
+    /**
+     * Lấy bản ghi theo ID cùng dữ liệu từ bảng chứa khóa ngoại
+     *
+     * @param [int] $id
+     * @return mysqli_result|bool
+     */
     public function getByIdWithThiSinh($id): mysqli_result|bool;
 }
