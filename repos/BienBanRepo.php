@@ -14,21 +14,31 @@ class BienBanRepo extends BaseRepo implements IBienBanInterface
 
     public function getAllWithThiSinh(): mysqli_result|bool
     {
-        $sql = "SELECT * "
-            . " FROM thisinh"
-            . " INNER JOIN " . $this->__table . " ON thisinh.id = " . $this->__table . ".thisinh_id";
-        return $this->_mysqli->query($sql);
+        try {
+            $sql = "SELECT * "
+                . " FROM thisinh"
+                . " INNER JOIN " . $this->__table . " ON thisinh.id = " . $this->__table . ".thisinh_id";
+            $result = $this->_mysqli->query($sql);
+        } catch (mysqli_sql_exception $e) {
+            throw $e;
+        }
+        return $result;
     }
 
     public function getByIdWithThiSinh($id): mysqli_result|bool
     {
-        $stmt = $this->_mysqli->prepare("
+        try {
+            $stmt = $this->_mysqli->prepare("
             SELECT * 
             FROM thisinh 
             INNER JOIN " . $this->__table . " ON thisinh.id = " . $this->__table . ".thisinh_id WHERE " . $this->__table . ".id = ?
         ");
-        $stmt->bind_param('s', $id);
-        $stmt->execute();
-        return $stmt->get_result();
+            $stmt->bind_param('s', $id);
+            $stmt->execute();
+            $result = $stmt->get_result();
+        } catch (mysqli_sql_exception $e) {
+            throw $e;
+        }
+        return $result;
     }
 }

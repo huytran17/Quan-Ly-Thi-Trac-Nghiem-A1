@@ -17,8 +17,8 @@ class BaseRepo extends Database implements IBaseInterface
     {
         try {
             $sql = "SELECT * FROM " . $this->__table;
-        } catch (\Exception $e) {
-            echo $e->getMessage();
+        } catch (mysqli_sql_exception $e) {
+            throw $e;
         }
         return $this->_mysqli->query($sql);
     }
@@ -29,8 +29,8 @@ class BaseRepo extends Database implements IBaseInterface
             $stmt = $this->_mysqli->prepare('select * from ' . $this->__table . ' where id = ?');
             $stmt->bind_param('s', $id);
             $stmt->execute();
-        } catch (\Exception $e) {
-            echo $e->getMessage();
+        } catch (mysqli_sql_exception $e) {
+            throw $e;
         }
         return $stmt->get_result();
     }
