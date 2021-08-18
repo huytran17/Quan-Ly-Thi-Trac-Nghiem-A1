@@ -14,7 +14,7 @@ class ThiSinh extends Model
         $this->__service = new ThiSinhService();
     }
 
-    public function getAll()
+    public function getAll(): mysqli_result|bool
     {
         return $this->__service->getAll();
     }

@@ -10,7 +10,7 @@ class BienBan extends Model
         $this->__service = new BienBanService();
     }
 
-    public function getAllWithThiSinh()
+    public function getAllWithThiSinh(): mysqli_result|bool
     {
         return $this->__service->getAllWithThiSinh();
     }

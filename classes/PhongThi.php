@@ -13,7 +13,7 @@ class PhongThi extends Model
         $this->__service = new PhongThiService();
     }
 
-    public function getAll()
+    public function getAll(): mysqli_result|bool
     {
         return $this->__service->getAll();
     }
