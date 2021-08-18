@@ -1,5 +1,6 @@
 <?php
 include_once APP_PATH . '/services/PhongThiService.php';
+include_once(APP_PATH . '/Traits/DateTimeFormat.php');
 
 class PhongThi extends Model
 {

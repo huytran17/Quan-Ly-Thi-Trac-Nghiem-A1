@@ -1,5 +1,7 @@
 <?php
 include_once APP_PATH . '/services/ThiSinhService.php';
+include_once(APP_PATH . '/Traits/DateTimeFormat.php');
+include_once(APP_PATH . '/Traits/UploadFile.php');
 
 class ThiSinh extends Model
 {
