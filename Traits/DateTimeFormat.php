@@ -7,7 +7,7 @@ trait DateTimeFormat
         try {
             return date("d-m-Y", strtotime($timestamp));
         } catch (Exception $e) {
-            echo $e->getMessage();
+            throw $e;
         }
     }
 
@@ -16,7 +16,7 @@ trait DateTimeFormat
         try {
             return date("Y-m-d", strtotime($timestamp));
         } catch (Exception $e) {
-            echo $e->getMessage();
+            throw $e;
         }
     }
 
@@ -25,7 +25,7 @@ trait DateTimeFormat
         try {
             return date("d-m-Y H:s", strtotime($timestamp));
         } catch (Exception $e) {
-            echo $e->getMessage();
+            throw $e;
         }
     }
 }
