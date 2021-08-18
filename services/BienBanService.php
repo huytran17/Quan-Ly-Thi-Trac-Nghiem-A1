@@ -10,8 +10,8 @@ class BienBanService extends BaseService implements IBienBanInterface
 
     public function __construct()
     {
-        parent::__construct(new BienBanRepo());
         $this->_bienBanRepo = new BienBanRepo();
+        parent::__construct($this->_bienBanRepo);
     }
 
     public function getAllWithThiSinh(): mysqli_result|bool

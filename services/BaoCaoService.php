@@ -10,8 +10,8 @@ class BaoCaoService extends BaseService implements IBaoCaoInterface
 
     public function __construct()
     {
-        parent::__construct(new BaoCaoRepo());
         $this->_baoCaoRepo = new BaoCaoRepo();
+        parent::__construct($this->_baoCaoRepo);
     }
 
     public function getAllWithThiSinh(): mysqli_result|bool
