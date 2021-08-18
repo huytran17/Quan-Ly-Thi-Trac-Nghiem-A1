@@ -56,6 +56,8 @@ class BaseRepo extends Database implements IBaseInterface
         $sql = rtrim($sql, ',');
         $sql .= ")";
 
+        $this->_mysqli->begin_transaction();
+
         try {
             $sth = $this->_pdo->prepare($sql);
 
@@ -64,8 +66,11 @@ class BaseRepo extends Database implements IBaseInterface
             }
 
             $sth->execute();
+
+            $this->_mysqli->commit();
         } catch (PDOException $e) {
-            echo $e->getMessage();
+            $this->_mysqli->rollback();
+            throw $e;
         }
 
         return $sth->rowCount();
@@ -85,6 +90,8 @@ class BaseRepo extends Database implements IBaseInterface
 
         $sql .= " WHERE id = ?";
 
+        $this->_mysqli->begin_transaction();
+
         try {
             $sht = $this->_pdo->prepare($sql);
 
@@ -95,8 +102,11 @@ class BaseRepo extends Database implements IBaseInterface
             $sht->bindParam(count($fieldValues) + 1, $id);
 
             $sht->execute();
+
+            $this->_mysqli->commit();
         } catch (PDOException $e) {
-            echo $e->getMessage();
+            $this->_mysqli->rollback();
+            throw $e;
         }
 
         return $sht->rowCount();
@@ -104,14 +114,19 @@ class BaseRepo extends Database implements IBaseInterface
 
     public function delete($id): int
     {
+        $this->_mysqli->begin_transaction();
         try {
             $stmt = $this->_mysqli->prepare(
                 "DELETE FROM " . $this->__table . " WHERE id=?"
             );
             $stmt->bind_param('s', $id);
             $stmt->execute();
-        } catch (\Exception $e) {
-            echo $e->getMessage();
+
+            $this->_mysqli->commit();
+        } catch (mysqli_sql_exception $e) {
+
+            $this->_mysqli->rollback();
+            throw $e;
         }
         return $stmt->affected_rows;
     }
