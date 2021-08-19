@@ -20,7 +20,7 @@ if (!empty($thisinh = $thisinh->fetch_object())) {
                     <p>Mã thí sinh: <?php echo $thisinh->mathisinh ?></p>
                     <p>Họ tên: <?php echo $thisinh->hoten ?></p>
                     <p>Ngày sinh: <?php echo $ts->dmyFormat($thisinh->ngaysinh) ?></p>
-                    <p>Giới tính: <?php echo $thisinh->gioitinh ?></p>
+                    <p>Giới tính: <?php echo $thisinh->gioitinh == 1 ? 'Nam' : ($thisinh->gioitinh == 2 ? 'Nữ' : 'Khác') ?></p>
                     <p>Số chứng minh thư: <?php echo $thisinh->socmt ?></p>
                     <p>Số điện thoại: <?php echo $thisinh->sodienthoai ?></p>
                     <p>Địa chỉ: <?php echo $thisinh->diachi ?></p>

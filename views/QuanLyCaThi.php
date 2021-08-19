@@ -9,7 +9,7 @@ $result = $cathi->getAll();
 
 <div class="shift_table table-responsive">
     <div class="manage-title">
-        <h1>Quản lý biên bản</h1>
+        <h1>Quản lý ca thi</h1>
     </div>
     <div class="group-header">
         <div class="functions">

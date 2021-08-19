@@ -25,7 +25,7 @@ if (!empty($cathiTS = $cathiTS->fetch_object()) && !empty($cathiPT = $cathiPT->f
                     <p>Mã thí sinh: <?php echo $cathiTS->mathisinh ?></p>
                     <p>Họ tên thí sinh: <?php echo $cathiTS->hoten ?></p>
                     <p>Ngày sinh: <?php echo $ct->dmyFormat($cathiTS->ngaysinh) ?></p>
-                    <p>Giới tính: <?php echo $cathiTS->gioitinh ?></p>
+                    <p>Giới tính: <?php echo $cathiTS->gioitinh == 1 ? 'Nam' : ($cathiTS->gioitinh == 2 ? 'Nữ' : 'Khác') ?></p>
                     <p>Số CMND: <?php echo $cathiTS->socmt ?></p>
                     <p>Địa chỉ: <?php echo $cathiTS->diachi ?></p>
                     <p>Số điện thoại: <?php echo $cathiTS->sodienthoai ?></p>
