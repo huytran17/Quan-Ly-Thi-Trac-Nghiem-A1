@@ -67,13 +67,16 @@ if (isset($_POST['submit'])) {
             'avatar_photo_path' => $avatar_path
         ]);
         header('location: ?profile');
-    } 
+    }
 }
 
 ?>
 
 <div class="create_profile">
     <form action="" method="post" enctype="multipart/form-data">
+        <div class="form-row">
+            <h1 class="form-title">Thêm thí sinh</h1>
+        </div>
         <div class="form-row">
             <div class="form-group col-6">
                 <label for="mathisinh">Mã thí sinh</label>
@@ -123,7 +126,7 @@ if (isset($_POST['submit'])) {
                 <input type="tel" name="sodienthoai" class="form-control" value="<?php echo isset($sodienthoai) ? $sodienthoai : '' ?>" required />
                 <span class="error"><?php echo $errors['sodienthoai'] ?></span>
             </div>
-            
+
             <div class="form-group col-6">
                 <label for="ngaydangkythi">Ngày đăng ký dự thi</label>
                 <input type="date" name="ngaydangkythi" class="form-control" value="<?php echo isset($ngaydangkythi) ? $ngaydangkythi : '' ?>" required />
@@ -139,7 +142,10 @@ if (isset($_POST['submit'])) {
         </div>
         <div class="form-row">
             <div class="form-group">
-                <input type="submit" name="submit" value="Tạo" class="btn btn-info"/>
+                <input type="submit" name="submit" value="Lưu" class="btn btn-info" />
+            </div>
+            <div class="form-group ml-3">
+                <a href="?profile" class="btn">Quay lại</a>
             </div>
         </div>
     </form>

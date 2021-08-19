@@ -8,9 +8,31 @@ $result = $quydinh->getAll();
 ?>
 
 <div class="rule_table table-responsive">
-    <div class="functions">
-        <div class="add">
-            <a href="?addrule">Thêm mới</a>
+    <div class="manage-title">
+        <h1>Quản lý quy định</h1>
+    </div>
+    <div class="group-header">
+        <div class="search">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <i class="input-group-text">
+                        <span class="fa fa-search"></span>
+                    </i>
+                </div>
+                <input type="search" class="form-control" placeholder="A,b,c...">
+                <div class="input-group-append">
+
+                    <button class="input-group-text">Search</button>
+                </div>
+            </div>
+        </div>
+        <div class="functions">
+            <div class="add">
+                <a class="btn" href="?addrule">Thêm mới</a>
+            </div>
+            <div class="print">
+                <a class="btn" href="#">In</a>
+            </div>
         </div>
     </div>
     <table class="table table-bordered table-striped table-hover text-center">
@@ -31,11 +53,10 @@ $result = $quydinh->getAll();
                         </a>
                     </td>
                     <td>
-                        <a href="?viewrule=<?php echo $obj->id ?>">
+                        <a class="btn" href="?viewrule=<?php echo $obj->id ?>">
                             Xem
                         </a>
-                        <span>|</span>
-                        <a href="?deleterule=<?php echo $obj->id ?>">
+                        <a class="btn" href="?deleterule=<?php echo $obj->id ?>">
                             Xóa
                         </a>
                     </td>

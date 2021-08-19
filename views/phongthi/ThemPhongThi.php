@@ -44,6 +44,9 @@ if (isset($_POST['submit'])) {
 ?>
 <div class="edit_profile">
     <form action="" method="post" enctype="multipart/form-data">
+    <div class="form-row">
+            <h1 class="form-title">Thêm phòng thi</h1>
+        </div>
         <div class="form-row">
             <div class="form-group">
                 <label for="maphongthi">Mã phòng thi</label>
@@ -75,7 +78,10 @@ if (isset($_POST['submit'])) {
 
         <div class="form-row">
             <div class="form-group">
-                <input type="submit" name="submit" value="Tạo" class="btn btn-info"/>
+                <input type="submit" name="submit" value="Lưu" class="btn btn-info"/>
+            </div>
+            <div class="form-group ml-3">
+                <a href="?room" class="btn">Quay lại</a>
             </div>
         </div>
     </form>

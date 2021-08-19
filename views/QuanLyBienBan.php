@@ -8,9 +8,17 @@ $result = $bienban->getAllWithThiSinh();
 ?>
 
 <div class="prot_table table-responsive">
-    <div class="functions">
-        <div class="add">
-            <a href="?addprot">Thêm mới</a>
+    <div class="manage-title">
+        <h1>Quản lý biên bản</h1>
+    </div>
+    <div class="group-header">
+        <div class="functions">
+            <div class="add">
+                <a class="btn" href="?addprot">Thêm mới</a>
+            </div>
+            <div class="print">
+                <a class="btn" href="#">In</a>
+            </div>
         </div>
     </div>
     <table class="table table-hover table-bordered table-striped text-center">
@@ -39,11 +47,10 @@ $result = $bienban->getAllWithThiSinh();
                         </a>
                     </td>
                     <td>
-                        <a href="?viewprot=<?php echo $obj->id ?>">
+                        <a class="btn" href="?viewprot=<?php echo $obj->id ?>">
                             <span>Xem</span>
                         </a>
-                        <span>|</span>
-                        <a href="?deleteprot=<?php echo $obj->id ?>">
+                        <a class="btn" href="?deleteprot=<?php echo $obj->id ?>">
                             Xóa
                         </a>
                     </td>

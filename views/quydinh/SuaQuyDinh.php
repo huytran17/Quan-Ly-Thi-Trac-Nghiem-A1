@@ -45,6 +45,9 @@ if (isset($_POST['submit'])) {
 <div class="edit_profile">
     <form action="" method="post" enctype="multipart/form-data">
         <div class="form-row">
+            <h1 class="form-title">Chỉnh sửa thông tin quy định</h1>
+        </div>
+        <div class="form-row">
             <div class="form-group">
                 <label for="tenquydinh">Tên quy định</label>
                 <input type="text" name="tenquydinh" class="form-control" value="<?php echo isset($tenquydinh) ? $tenquydinh : '' ?>" required />
@@ -61,7 +64,10 @@ if (isset($_POST['submit'])) {
 
         <div class="form-row">
             <div class="form-group">
-                <input type="submit" name="submit" value="Cập nhật" class="btn btn-info" />
+                <input type="submit" name="submit" value="Lưu" class="btn btn-info" />
+            </div>
+            <div class="form-group ml-3">
+                <a href="?rule" class="btn">Quay lại</a>
             </div>
         </div>
     </form>

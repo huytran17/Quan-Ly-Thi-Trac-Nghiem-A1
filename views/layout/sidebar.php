@@ -25,4 +25,4 @@
 </nav>
 </div>
 
-<div class="col-10" style="border-left: 1px solid #2580E2;">
+<div class="col-10" style="border-left: 1px solid #2580E2; position: relative;">

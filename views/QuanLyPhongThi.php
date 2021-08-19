@@ -8,9 +8,17 @@ $result = $phongthi->getAll();
 ?>
 
 <div class="room_table table-responsive">
-    <div class="functions">
-        <div class="add">
-            <a href="?addroom">Thêm mới</a>
+    <div class="manage-title">
+        <h1>Quản lý phòng thi</h1>
+    </div>
+    <div class="group-header">
+        <div class="functions">
+            <div class="add">
+                <a class="btn" href="?addroom">Thêm mới</a>
+            </div>
+            <div class="print">
+                <a class="btn" href="#">In</a>
+            </div>
         </div>
     </div>
     <table class="table table-hover table-striped table-bordered text-center">
@@ -35,7 +43,7 @@ $result = $phongthi->getAll();
                     <td><?php echo $phongthi->dmyhsFormat($obj->thoigianbatdau) ?></td>
                     <td><?php echo $phongthi->dmyhsFormat($obj->thoigianketthuc) ?></td>
                     <td>
-                        <a href="?deleteroom=<?php echo $obj->id ?>">
+                        <a class="btn" href="?deleteroom=<?php echo $obj->id ?>">
                             Xóa
                         </a>
                     </td>

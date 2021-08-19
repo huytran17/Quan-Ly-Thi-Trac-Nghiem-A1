@@ -8,15 +8,37 @@ $result = $thisinh->getAll();
 ?>
 
 <div class="profile_table responsive-table">
-    <div class="functions">
-        <div class="add">
-            <a href="?addprofile">Thêm mới</a>
+    <div class="manage-title">
+        <h1>Quản lý hồ sơ</h1>
+    </div>
+    <div class="group-header">
+        <div class="search">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <i class="input-group-text">
+                        <span class="fa fa-search"></span>
+                    </i>
+                </div>
+                <input type="search" class="form-control" placeholder="A,b,c...">
+                <div class="input-group-append">
+                    
+                    <button class="input-group-text">Search</button>
+                </div>
+            </div>
+        </div>
+        <div class="functions">
+            <div class="add">
+                <a class="btn" href="?addprofile">Thêm mới</a>
+            </div>
+            <div class="print">
+                <a class="btn" href="#">In</a>
+            </div>
         </div>
     </div>
     <table class="table table-striped table-bordered table-hover text-center">
         <thead>
             <tr>
-                <th>Mã thí sinh</th>
+                <th>SBD</th>
                 <th>Họ tên</th>
                 <th>Ngày sinh</th>
                 <th>Giới tính</th>
@@ -43,11 +65,10 @@ $result = $thisinh->getAll();
                     <td><?php echo $obj->socmt ?></td>
                     <td><?php echo $obj->ngaydangkythi ?></td>
                     <td>
-                        <a href="?editprofile=<?php echo $obj->id ?>">
+                        <a class="btn" href="?editprofile=<?php echo $obj->id ?>">
                             <span>Chỉnh sửa</span>
                         </a>
-                        <span>|</span>
-                        <a href="?deleteprofile=<?php echo $obj->id ?>">
+                        <a class="btn" href="?deleteprofile=<?php echo $obj->id ?>">
                             Xóa
                         </a>
                     </td>
