@@ -32,14 +32,15 @@ $result = $phongthi->getAll();
             <?php while ($obj = $result->fetch_object()) { ?>
                 <tr>
                     <td>
-                        <a href="?editroom=<?php echo $obj->id ?>">
-                            <span><?php echo $obj->maphongthi ?></span>
-                        </a>
+                        <?php echo $obj->maphongthi ?>
                     </td>
                     <td><?php echo $phongthi->dmyhsFormat($obj->ngaythi) ?></td>
                     <td><?php echo $phongthi->dmyhsFormat($obj->thoigianbatdau) ?></td>
                     <td><?php echo $phongthi->dmyhsFormat($obj->thoigianketthuc) ?></td>
                     <td>
+                        <a class="btn" href="?editroom=<?php echo $obj->id ?>">
+                            Sửa
+                        </a>
                         <a class="btn" href="?deleteroom=<?php echo $obj->id ?>">
                             Xóa
                         </a>

@@ -31,13 +31,14 @@ $result = $quydinh->getAll();
                 <tr>
                     <td><?php echo $obj->id ?></td>
                     <td>
-                        <a href="?editrule=<?php echo $obj->id ?>">
-                            <span><?php echo $obj->tenquydinh ?></span>
-                        </a>
+                        <?php echo $obj->tenquydinh ?>
                     </td>
                     <td>
                         <a class="btn" href="?viewrule=<?php echo $obj->id ?>">
                             Xem
+                        </a>
+                        <a class="btn" href="?editrule=<?php echo $obj->id ?>">
+                            Sửa
                         </a>
                         <a class="btn" href="?deleterule=<?php echo $obj->id ?>">
                             Xóa

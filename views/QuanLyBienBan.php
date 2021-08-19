@@ -39,13 +39,14 @@ $result = $bienban->getAllWithThiSinh();
                     </td>
                     <td><?php echo $obj->hoten ?></td>
                     <td>
-                        <a href="?editprot=<?php echo $obj->id ?>">
-                            <span><?php echo $obj->tieude ?></span>
-                        </a>
+                        <?php echo $obj->tieude ?>
                     </td>
                     <td>
                         <a class="btn" href="?viewprot=<?php echo $obj->id ?>">
                             <span>Xem</span>
+                        </a>
+                        <a class="btn" href="?editprot=<?php echo $obj->id ?>">
+                            <span>Sửa</span>
                         </a>
                         <a class="btn" href="?deleteprot=<?php echo $obj->id ?>">
                             Xóa

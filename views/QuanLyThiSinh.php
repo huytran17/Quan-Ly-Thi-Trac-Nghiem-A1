@@ -36,20 +36,21 @@ $result = $thisinh->getAll();
             <?php while ($obj = $result->fetch_object()) { ?>
                 <tr>
                     <td>
-                        <a href="?viewprofile=<?php echo $obj->id ?>">
-                            <span><?php echo $obj->mathisinh ?></span>
-                        </a>
+                        <?php echo $obj->mathisinh ?>
                     </td>
                     <td><?php echo $obj->hoten ?></td>
-                    <td><?php echo $obj->ngaysinh ?></td>
+                    <td><?php echo $thisinh->dmyFormat($obj->ngaysinh) ?></td>
                     <td><?php echo $obj->gioitinh == 1 ? 'Nam' : ($obj->gioitinh == 2 ? 'Nữ' : 'Khác') ?></td>
                     <td><?php echo $obj->sodienthoai ?></td>
                     <td><?php echo $obj->diachi ?></td>
                     <td><?php echo $obj->socmt ?></td>
-                    <td><?php echo $obj->ngaydangkythi ?></td>
+                    <td><?php echo $thisinh->dmyhsFormat($obj->ngaydangkythi) ?></td>
                     <td>
+                        <a class="btn" href="?viewprofile=<?php echo $obj->id ?>">
+                            <span>Xem</span>
+                        </a>
                         <a class="btn" href="?editprofile=<?php echo $obj->id ?>">
-                            <span>Chỉnh sửa</span>
+                            <span>Sửa</span>
                         </a>
                         <a class="btn" href="?deleteprofile=<?php echo $obj->id ?>">
                             Xóa
