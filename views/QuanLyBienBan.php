@@ -16,9 +16,6 @@ $result = $bienban->getAllWithThiSinh();
             <div class="add">
                 <a class="btn" href="?addprot">Thêm mới</a>
             </div>
-            <div class="print">
-                <a class="btn" href="#">In</a>
-            </div>
         </div>
     </div>
     <table class="table table-hover table-bordered table-striped text-center">

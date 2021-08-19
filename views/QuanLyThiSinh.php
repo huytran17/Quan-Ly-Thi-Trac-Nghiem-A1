@@ -12,26 +12,9 @@ $result = $thisinh->getAll();
         <h1>Quản lý hồ sơ</h1>
     </div>
     <div class="group-header">
-        <div class="search">
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <i class="input-group-text">
-                        <span class="fa fa-search"></span>
-                    </i>
-                </div>
-                <input type="search" class="form-control" placeholder="A,b,c...">
-                <div class="input-group-append">
-                    
-                    <button class="input-group-text">Search</button>
-                </div>
-            </div>
-        </div>
         <div class="functions">
             <div class="add">
                 <a class="btn" href="?addprofile">Thêm mới</a>
-            </div>
-            <div class="print">
-                <a class="btn" href="#">In</a>
             </div>
         </div>
     </div>

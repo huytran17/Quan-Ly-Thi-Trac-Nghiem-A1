@@ -16,9 +16,6 @@ $result = $baocao->getAllWithThiSinh();
             <div class="add">
                 <a class="btn" href="?addreport">Thêm mới</a>
             </div>
-            <div class="print">
-                <a class="btn" href="#">In</a>
-            </div>
         </div>
     </div>
     <table class="table table-striped table-bordered table-hover text-center">

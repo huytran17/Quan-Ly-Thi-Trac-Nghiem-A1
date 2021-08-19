@@ -16,9 +16,6 @@ $result = $cathi->getAll();
             <div class="add">
                 <a class="btn" href="?addshift">Thêm mới</a>
             </div>
-            <div class="print">
-                <a class="btn" href="#">In</a>
-            </div>
         </div>
     </div>
     <table class="table table-hover table-bordered table-striped text-center">

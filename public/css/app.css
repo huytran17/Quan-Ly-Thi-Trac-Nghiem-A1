@@ -29,13 +29,6 @@
     width: 200px;
 }
 
-.search {
-    display: flex;
-    justify-content: center;
-    margin-left: auto;
-    width: 450px;
-}
-
 .btn {
     background-color: #ffffff;
     color: #000000;
@@ -43,14 +36,6 @@
     border-radius: 3px;
     padding: 3px 5px;
     font-size: 14px;
-}
-
-.print {
-    width: 90px;
-}
-
-.print>.btn {
-    width: 100%;
 }
 
 .active {
