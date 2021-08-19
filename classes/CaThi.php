@@ -1,14 +1,22 @@
 <?php
 
-include_once APP_PATH . '/services/BaoCaoService.php';
+include_once APP_PATH . '/services/CaThiService.php';
+include_once(APP_PATH . '/Traits/DateTimeFormat.php');
 
-class BaoCao extends Model
+class CaThi extends Model
 {
+    use DateTimeFormat;
+
     private $__service;
 
     public function __construct()
     {
-        $this->__service = new BaoCaoService();
+        $this->__service = new CaThiService();
+    }
+
+    public function getAll(): mysqli_result|bool
+    {
+        return $this->__service->getAll();
     }
 
     public function getAllWithThiSinh(): mysqli_result|bool
@@ -19,6 +27,16 @@ class BaoCao extends Model
     public function getByIdWithThiSinh($id): mysqli_result|bool
     {
         return $this->__service->getByIdWithThiSinh($id);
+    }
+
+    public function getAllWithPhongThi(): mysqli_result|bool
+    {
+        return $this->__service->getAllWithPhongThi();
+    }
+
+    public function getByIdWithPhongThi($id): mysqli_result|bool
+    {
+        return $this->__service->getByIdWithPhongThi($id);
     }
 
     public function insert($data): int

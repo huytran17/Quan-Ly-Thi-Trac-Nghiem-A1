@@ -61,6 +61,16 @@ if (array_key_exists('profile', $_GET)) {
     include_once(APP_PATH . '/views/baocao/XoaBaoCao.php');
 } else if (array_key_exists('error', $_GET)) {
     include_once(APP_PATH . '/views/common/Error.php');
+} else if (array_key_exists('shift', $_GET)) {
+    include_once(APP_PATH . '/views/QuanLyCaThi.php');
+} else if (array_key_exists('viewshift', $_GET)) {
+    include_once(APP_PATH . '/views/cathi/XemCaThi.php');
+} else if (array_key_exists('addshift', $_GET)) {
+    include_once(APP_PATH . '/views/cathi/ThemCaThi.php');
+} else if (array_key_exists('editshift', $_GET)) {
+    include_once(APP_PATH . '/views/cathi/SuaCaThi.php');
+} else if (array_key_exists('deleteshift', $_GET)) {
+    include_once(APP_PATH . '/views/cathi/XoaCaThi.php');
 }
 
 include_once(APP_PATH . '/views/layout/footer.php');

@@ -8,6 +8,11 @@
         <li class="nav-item <?php echo in_array(array_keys($_GET)[0], ['room', 'viewroom', 'addroom', 'editroom']) ? 'active' : '' ?>">
             <a class="nav-link" href="?room">Phòng thi</a>
         </li>
+        <li class="nav-item <?php echo in_array(array_keys($_GET)[0], ['shift', 'viewshift', 'addshift', 'editshift']) ? 'active' : '' ?>">
+            <a class="nav-link" href="?shift">
+                <span>Ca thi</span>
+            </a>
+        </li>
         <li class="nav-item <?php echo in_array(array_keys($_GET)[0], ['prot', 'viewprot', 'addprot', 'editprot']) ? 'active' : '' ?>">
             <a class="nav-link" href="?prot">Biên bản</a>
         </li>
