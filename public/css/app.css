@@ -102,3 +102,8 @@
 .form-row:last-child>.form-group:first-child>input {
     width: 100%;
 }
+
+.card-footer {
+    border: none;
+    background: #ffffff;
+}

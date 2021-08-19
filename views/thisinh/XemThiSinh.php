@@ -27,6 +27,11 @@ if (!empty($thisinh = $thisinh->fetch_object())) {
                     <p>Ngày đăng ký dự thi: <?php echo $ts->dmyFormat($thisinh->ngaydangkythi) ?></p>
                 </div>
             </div>
+            <div class="card-footer">
+                <div class="viewback">
+                    <a href="?profile" class="btn">Quay lại</a>
+                </div>
+            </div>
         </div>
     </div>
 <?php } ?>

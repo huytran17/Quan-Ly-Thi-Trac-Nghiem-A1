@@ -9,7 +9,7 @@ else $baocao = null;
 
 if (!empty($baocao = $baocao->fetch_object())) {
 ?>
-    <div class="view_profile">
+    <div class="view_report">
         <div class="card border-primary">
             <div class="card-header">
                 <h4 class="card-title">Thông tin báo cáo</h4>
@@ -20,6 +20,11 @@ if (!empty($baocao = $baocao->fetch_object())) {
                     <p>Mã thí sinh: <?php echo $baocao->mathisinh ?></p>
                     <p>Họ tên thí sinh: <?php echo $baocao->hoten ?></p>
                     <p>Kết quả thi: <?php echo $baocao->ketquathi ?></p>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="viewback">
+                    <a href="?report" class="btn">Quay lại</a>
                 </div>
             </div>
         </div>

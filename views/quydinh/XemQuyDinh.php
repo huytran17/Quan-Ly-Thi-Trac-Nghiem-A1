@@ -21,6 +21,11 @@ if (!empty($quydinh = $quydinh->fetch_object())) {
                     <p>Nội dung: <?php echo $quydinh->noidung ?></p>
                 </div>
             </div>
+            <div class="card-footer">
+                <div class="viewback">
+                    <a href="?rule" class="btn">Quay lại</a>
+                </div>
+            </div>
         </div>
     </div>
 <?php } ?>

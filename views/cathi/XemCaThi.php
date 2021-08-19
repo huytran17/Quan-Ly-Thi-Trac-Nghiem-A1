@@ -36,6 +36,11 @@ if (!empty($cathiTS = $cathiTS->fetch_object()) && !empty($cathiPT = $cathiPT->f
                     <p>Thời gian kết thúc: <?php echo $ct->dmyhsFormat($cathiPT->thoigianketthuc) ?></p>
                 </div>
             </div>
+            <div class="card-footer">
+                <div class="viewback">
+                    <a href="?shift" class="btn">Quay lại</a>
+                </div>
+            </div>
         </div>
     </div>
 <?php } ?>
