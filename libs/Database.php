@@ -14,7 +14,7 @@ class Database
         $this->getConnection();
     }
 
-    public function getMysqliConnection(): mysqli
+    private function getMysqliConnection(): mysqli
     {
         if ($this->_mysqli === null) {
             $this->_mysqli = new mysqli($this->__host, $this->__username, $this->__password, $this->__database);
@@ -26,7 +26,7 @@ class Database
         return $this->_mysqli;
     }
 
-    public function getPdoConnection(): PDO
+    private function getPdoConnection(): PDO
     {
         if ($this->_pdo === null) {
             try {
@@ -43,13 +43,13 @@ class Database
         return $this->_pdo;
     }
 
-    public function getConnection()
+    private function getConnection()
     {
         $this->getMysqliConnection();
         $this->getPdoConnection();
     }
 
-    public function disconnect(): void
+    private function disconnect(): void
     {
         $this->_mysqli->close();
         $this->_pdo = null;

@@ -44,7 +44,7 @@ if (isset($_POST['submit'])) {
 <div class="edit_shift">
     <form action="" method="post" enctype="multipart/form-data">
         <div class="form-row">
-            <h1 class="form-title">Chỉnh sửa thông tin ca thi</h1>
+            <h1 class="form-title">Thêm ca thi</h1>
         </div>
         <div class="form-row">
             <div class="form-group">
@@ -59,7 +59,7 @@ if (isset($_POST['submit'])) {
         </div>
         <div class="form-row">
             <div class="form-group">
-                <label for="phongthi_id">Mã thí sinh</label>
+                <label for="phongthi_id">Mã phòng thi</label>
                 <select name="phongthi_id" class="form-control">
                     <?php while ($obj = $allPT->fetch_object()) { ?>
                         <option value="<?php echo $obj->id; ?>"><?php echo $obj->maphongthi; ?></option>
